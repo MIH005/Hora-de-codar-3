@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var alunosAprovados = 0;
+        var continuar = "sim";
+
+        while (continuar === "sim") {
+            var nota1 = parseFloat(prompt("Informe a primeira nota:"));
+            var nota2 = parseFloat(prompt("Informe a segunda nota:"));
+            var media = (nota1 + nota2) / 2;
+
+            console.log("Média final: " + media);
+
+             if (media >= 9.5) {
+                alunosAprovados++;
+            }
+
+            continuar = prompt("Calcular a média de outro aluno? Sim/Não").toLowerCase();
+        }
+
+        console.log("Quantidade de alunos aprovados: " + alunosAprovados);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico 2</title>
+</head>
+    <h1>Exercico 2 - Bomba Relógio </h1>
+    <p id="result"></p>
+<body>
+    <script>
+        /* 2 - Crie uma bomba relógio (usando somente código - para deixar claro!) 
+        cuja contagem regressiva vá de 30 a 0. No final da repetição escreva "EXPLOSÃO". */
+
+        let i = 30;  
+        const contagem = setInterval(() => {
+
+        if (i >= 0) {  
+            document.getElementById("result").innerHTML = 
+                "Faltam " + i + " segundos para a bomba explodir";
+            i--;  
+        }else {
+            
+            clearInterval(contagem);  
+            document.getElementById("result").innerHTML = "EXPLOSÃO!";
+            alert("BOOM!");  
+        }
+
+        }, 1000); 
+
+
+
+    </script>
+</body>
+</html>

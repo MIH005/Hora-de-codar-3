@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let somaNotas = 0;
+
+        for (let i = 1; i <= 6; i++) {
+            let nota = parseFloat(prompt(`Informe a nota ${i} (0 a 10):`));
+    
+            while (nota < 0 || nota > 10) {
+                nota = parseFloat(prompt(`Nota inválida! Informe a nota ${i} (0 a 10):`));
+            }
+
+            somaNotas += nota;
+        }
+
+        let media = somaNotas / 6;
+        console.log("Média final: " + media);
+
+    </script>
+</body>
+</html>
